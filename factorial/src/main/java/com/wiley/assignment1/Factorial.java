@@ -35,6 +35,21 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
 
+		 // Get Input and Covert to Integer
+
+		 boolean isValid = scanner.hasNextInt();
+
+		 if (isValid) {
+			 num = scanner.nextInt();
+			 if (num > 0 && num <= 10) {
+				 return num;
+			 }
+		 }
+
+		 // Print Invalid Message
+		 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+
+		 // Return -1 bc input is invalid
 		return -1;
 
 		//YOUR CODE ENDS HERE
@@ -54,6 +69,9 @@ public class Factorial {
 		int result = 1;
 		//YOUR CODE STARTS HERE
 
+		for  (int i = 1; i <= num; i++) {
+			result *= i;
+		}
  
 
 		//YOUR CODE ENDS HERE
