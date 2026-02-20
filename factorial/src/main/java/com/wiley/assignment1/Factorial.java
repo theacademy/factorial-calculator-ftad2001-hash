@@ -35,6 +35,24 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
 
+		 // Validate Input is Integer
+
+		 boolean isValid = scanner.hasNextInt();
+
+		 // Validate Input is between 1 and 10 (inclusive)
+		 if (isValid) {
+			 num = scanner.nextInt(); // Store Input in instance variable 'num'
+
+			 if (num > 0 && num <= 10) { // Check input to be between 1 and 10 (inclusive)
+
+				 return num; // Return current user input
+			 }
+		 }
+
+		 // Print Invalid Message
+		 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+
+		 // Return -1 bc input is invalid
 		return -1;
 
 		//YOUR CODE ENDS HERE
@@ -54,6 +72,10 @@ public class Factorial {
 		int result = 1;
 		//YOUR CODE STARTS HERE
 
+		 // Iterate from 1 to n (inclusive) to get all factors for mult
+		for  (int i = 1; i <= num; i++) {
+			result *= i; // Multiply current number with previous result for factorial mult
+		}
  
 
 		//YOUR CODE ENDS HERE
